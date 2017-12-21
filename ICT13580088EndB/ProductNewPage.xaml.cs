@@ -17,8 +17,9 @@ namespace ICT13580088EndB
 			saveButton.Clicked += SaveButton_Clicked;
 			cancelButton.Clicked += CancelButton_Clicked;
 
-			tryPicker.Items.Add("เก๋ง");
-			tryPicker.Items.Add("มอไซต์");
+			typePicker.Items.Add("เก๋ง");
+			typePicker.Items.Add("มอไซต์");
+            typePicker.Items.Add("กระบะ");
 
 			brandPicker.Items.Add("โตโยต้า");
 			brandPicker.Items.Add("ฮอนด้า");
@@ -37,7 +38,7 @@ namespace ICT13580088EndB
 			yearStepper.ValueChanged += YearStepper_ValueChanged1;
 			if (product != null)
 			{
-				tryPicker.SelectedItem = product.Trycar;
+				typePicker.SelectedItem = product.Typecar;
 				brandPicker.SelectedItem = product.Brand;
 				modelEntry.Text = product.Model;
 				mileEntry.Text = product.Mile;
@@ -72,7 +73,7 @@ namespace ICT13580088EndB
 				{
 					product = new Product();
 
-					product.Trycar = tryPicker.SelectedItem.ToString();
+					product.Typecar = typePicker.SelectedItem.ToString();
 					product.Brand = brandPicker.SelectedItem.ToString();
 					product.Model = modelEntry.Text;
 					product.Mile = mileEntry.Text;
@@ -92,7 +93,7 @@ namespace ICT13580088EndB
 
 				else
 				{
-					product.Trycar = tryPicker.SelectedItem.ToString();
+					product.Typecar = typePicker.SelectedItem.ToString();
 					product.Brand = brandPicker.SelectedItem.ToString();
 					product.Model = modelEntry.Text;
 					product.Mile = mileEntry.Text;

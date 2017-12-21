@@ -11,7 +11,7 @@ namespace ICT13580088EndB.Model
 
 		[NotNull]
 		[MaxLength(100)]
-		public string Trycar { get; set; }
+		public string Typecar { get; set; }
 		public string Brand { get; set; }
 		public String Model { get; set; }
 		public int Years { get; set; }

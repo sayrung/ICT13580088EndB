@@ -8,7 +8,7 @@
             <Frame
                 Margin="20"
                 CornerRadius="10"
-                BackgroundColor="Green"
+                BackgroundColor="Gray"
                 VerticalOptions="Start">
                 <StackLayout
                     Orientation="Vertical">
@@ -19,10 +19,10 @@
                         FontAttributes="Bold" />
                     <Label
                         Text="ประเภท"
-                        x:Name="tryLabel"
+                        x:Name="typeLabel"
                         FontSize="12" />
                     <Picker
-                    x:Name="tryPicker"
+                    x:Name="typePicker"
                     Title="เลือประเภท"/>
                     <Label
                         Text="ยี่ห้อ"

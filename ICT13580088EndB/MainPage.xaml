@@ -3,14 +3,14 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="ICT13580088EndB.MainPage">
-    <ContentPage.ToolbarItems>
+   <ContentPage.ToolbarItems>
         <ToolbarItem
             Text="New"
             x:Name="newButton" />
     </ContentPage.ToolbarItems>
     <ListView
         x:Name="productListView"
-        RowHeight="100">
+        RowHeight="250">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
@@ -40,16 +40,30 @@
                         <StackLayout
                             Grid.Column="1">
                             <Label
-                                Text="{Binding Name}"
+                                Text="{Binding Typecar}"
                                 FontAttributes="Bold"
                                 TextColor="Navy" />
                             <Label
-                                Text="{Binding Description}"
+                                Text="{Binding Brand}"
+                                LineBreakMode="TailTruncation" />
+                            
+                            <Label
+                                Text="{Binding Years}"
                                 LineBreakMode="TailTruncation" />
                             <Label
-                                Text="{Binding SellPrice, StringFormat='ราคา {0:N0} บาท'}" />
+                                Text="{Binding Color}"
+                                LineBreakMode="TailTruncation" />
                             <Label
-                                Text="{Binding Stock, StringFormat='สินค้าคงเหลือ {0} ชิ้น'}" />
+                                Text="{Binding Model}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Tel}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Price, StringFormat='ราคา {0:N0} บาท'}" />
+                            <Label
+                                Text="{Binding Address}"
+                                LineBreakMode="TailTruncation" />
                         </StackLayout>
                         <Button
                             Text="+"
